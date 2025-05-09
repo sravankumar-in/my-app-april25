@@ -1,0 +1,12 @@
+<div class="box">
+    <div class="div class">
+        <label>Length:</label>
+        <input type="number"[(ngModel)]="length"><br>
+        <label>width:</label>
+        <input type="number"[(ngModel)]="width"><br>
+    </div>
+
+    <button (click)="Area()"[disabled]="(length==0)||(width==0)">Area</button>
+    <button (click)="Perimeter()"[disabled]="(length==0)||(width==0)">Perimeter</button>
+    <h2 id="">Result:{{result}}</h2>
+</div>

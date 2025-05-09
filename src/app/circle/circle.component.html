@@ -1,0 +1,11 @@
+<div class="box">
+    <div class="div class">
+        <label for="">Radius:</label>
+        <input type="number"[(ngModel)]="Radius"><br>
+        
+    </div>
+
+    <button (click)="Area()"[disabled]="(Radius==0) ">Area</button>
+    <button (click)="Perimeter()"[disabled]="(Radius==0)">Perimeter</button>
+    <h2 id="">Result:{{result}}</h2>
+</div>

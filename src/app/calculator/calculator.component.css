@@ -1,0 +1,26 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: #e28e27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc{
+    width: 30%;
+    height: 30%;
+    background-color: aqua;
+    padding: 5%;
+    margin: 16%;
+    border-radius: 7px;
+    
+    }
+
+    Button{
+        /* width: 35%; */
+        border-radius: 10px;
+        background-color: pink;
+        margin: 3px;
+
+    }

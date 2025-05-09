@@ -1,0 +1,13 @@
+<div class="box">
+    <div class="div class">
+        <label>Height:</label>
+        <input type="number"[(ngModel)]="Height"><br>
+        <label>weight:</label>
+        <input type="number"[(ngModel)]="weight"><br>
+    </div>
+
+    <button (click)="BMI()"[disabled]="(Height==0)||(weight==0)">calculate</button>
+
+    <h2>Your BMI is:{{result}}</h2>
+</div>
+

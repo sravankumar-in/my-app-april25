@@ -1,0 +1,32 @@
+.box{
+    width: 50%;
+    height: 70%;
+    background-color: white;
+    text-align: left;
+    margin: 5%;
+}
+
+.s{display: flex;}
+
+.Area{
+    background-color: #2bac2b;
+    width: 80%;
+    height: 10%;
+    margin: 5% 10px;
+
+}
+
+.div-class{
+    margin: 10px;
+}
+
+.perimeter{
+    background-color: #2bac2b;
+    width: 80%;
+    height: 10%;
+    margin: 5% 10px;
+
+}
+.div-button{
+    margin:10px
+}
