@@ -1,0 +1,64 @@
+<h1>Vehicles Details</h1>
+<input type="text" placeholder="Enter text to search" [(ngModel)]="keywords" (keyup)="search()">
+<select [(ngModel)]="column">
+    <option value="Vehicle">Vehicle</option>
+    <option value="manufacturer">Manufacturer</option>
+    <option value="type">Type</option>
+    <option value="model">Model</option>
+    <option value="fuel">Fuel</option>
+
+</select>
+<select [(ngModel)]="order">
+    <option value="asc">Ascending order</option>
+    <option value="desc">Descending order</option>
+
+</select>
+<button (click)="sort()">Sort</button>
+<!-- pagination -->
+<select [(ngModel)]="limit">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+    <option value="50">50</option>
+
+</select>
+<select [(ngModel)]="page">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+
+</select>
+<button (click)="pagination()">Pagination</button>
+<button routerLink="/dashboard/create-vehicle">Create</button>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Vehicle</th>
+            <th>Manufacturer</th>
+            <th>Type</th>
+            <th>Model</th>
+            <th>Fuel</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td><button class="btn btn-danger"
+            (click)="delete(vehicle.id)">Delete</button></td>
+            
+    
+        </tr>
+    </tbody>
+</table>
+

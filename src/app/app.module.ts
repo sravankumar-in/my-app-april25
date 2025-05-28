@@ -14,8 +14,25 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { Flipkart1Component } from './flipkart1/flipkart1.component';
+import { MailsComponent } from './mails/mails.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { DetailsComponent } from './details/details.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { CapitalDirective } from './capital.directive';
+import { InrPipe } from './inr.pipe';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -31,14 +48,37 @@ import { DirectivesComponent } from './directives/directives.component';
     RectangleComponent,
     CircleComponent,
     BMIComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeesComponent,
+    FlipkartComponent,
+    VehiclesComponent,
+    CreateVehicleComponent,
+    Flipkart1Component,
+    MailsComponent,
+    StudentsComponent,
+    CreateUserComponent,
+    DetailsComponent,
+    CommunicationComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    CapitalDirective,
+    InrPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

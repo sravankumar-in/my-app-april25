@@ -1,17 +1,19 @@
 .parent{
     width:100vw;
     height:100vh;
-    background-color: aquamarine;
+    background-color: rgb(21, 197, 139);
     display: flex;
 }
 .left{
     width: 20%;
     height: 100%;
-    background-color: rgb(17, 106, 165);
+    background-color: rgb(163, 61, 83);
     text-align: center;
+    overflow: auto;
 }
 .right{
     width: 80%;
     height: 100%;
-    background-color: coral;
+    background-color: rgb(105, 152, 190);
+    overflow: auto;
 }

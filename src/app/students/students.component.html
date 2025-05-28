@@ -1,0 +1,69 @@
+<h1>Student-Cards</h1>
+
+<div class="parent">
+    <div class="top">
+      <input type="text">
+      <label for="">sort column</label>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <label for="">sort order</label>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <button class="btn btn-primary">sort</button>
+      <label for="">limit</label>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <label for="">page</label>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <button class="btn btn-primary">page</button>
+    </div>
+    <div class="bottom">
+      
+  <div class="card"  *ngFor="let card of students">
+    <div class="h1"><img src="{{card.school_logo}}" height="20px" width="20px">&nbsp; {{card.school_name}}&nbsp;{{card.school_city}}</div>
+    <div class="m">
+      <div class="data">
+    
+    <p>Name:{{card.name}}</p>
+    <p>Phone:{{card.phone}}</p>
+    <p> DOB:{{card.dob}}</p>
+    <p>city:{{card.city}}</p>
+    <P>Email:{{card.email}}</P>
+    </div>
+    <div class="pic"><img src= {{card.profile_picture}} alt="image" class="img" height="100%" width="100%"></div>
+  </div>
+  <div class="">
+    <button class="btn btn-primary">View</button>
+    <button class="btn btn-secondary">Edit</button>
+    <button class="btn btn-danger">Delete</button>
+
+  </div>
+</div>
+
+
+</div>
+</div>
+
+
+
