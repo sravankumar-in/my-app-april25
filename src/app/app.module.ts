@@ -33,6 +33,7 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { TokenInterceptor } from './token.interceptor';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { TokenInterceptor } from './token.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [
     {
